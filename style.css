@@ -28,6 +28,7 @@ main , #evaluation-form {
   width: 675px;
   max-width: 675px;
   border: 1px solid;
+  flex-direction: column;
 }
 
 #textarea {
