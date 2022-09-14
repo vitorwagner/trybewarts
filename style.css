@@ -21,3 +21,8 @@
 {
   display: flex;
 }
+
+#textarea
+{
+  resize: none;
+}
