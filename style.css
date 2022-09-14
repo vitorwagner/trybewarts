@@ -19,6 +19,17 @@
   display: flex;
 }
 
+/* Main e form */
+main , #evaluation-form {
+  display: flex;
+}
+
+#evaluation-form {
+  width: 675px;
+  max-width: 675px;
+  border: 1px solid;
+}
+
 #textarea {
   resize: none;
 }
