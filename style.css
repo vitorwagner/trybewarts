@@ -1,13 +1,11 @@
-*
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 /* Header */
-.header
-{
+.header {
   display: flex;
   background-color: rgb(50, 167, 145);
   justify-content: space-between;
@@ -17,12 +15,10 @@
 }
 
 /* Header form */
-.trybewarts-login
-{
+.trybewarts-login {
   display: flex;
 }
 
-#textarea
-{
+#textarea {
   resize: none;
 }
