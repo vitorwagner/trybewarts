@@ -1,3 +1,14 @@
+// CONSTANTES
+const formHeader = document.querySelector('.trybewarts-login');
+const btnSubmmitEvaluationForm = document.querySelector('#evaluation-form');
+const agreementCheck = document.getElementById('agreement');
+const submitBtn = document.getElementById('submit-btn');
+const textarea = document.getElementById('textarea');
+const counter = document.getElementById('counter');
+
+
+// FUNÇÕES
+
 // Valida o formulário do header de acordo como o requisito 3
 function validarFormularioLogin(e) {
   e.preventDefault();
@@ -13,22 +24,43 @@ function validarFormularioLogin(e) {
   }
 }
 
-const formHeader = document.querySelector('.trybewarts-login');
-formHeader.addEventListener('submit', validarFormularioLogin);
+// Quando o formulário é preenchido.
+function exibirFormularioCadastro(e) {
+  e.preventDefault();
 
-const agreementCheck = document.getElementById('agreement');
-const submitBtn = document.getElementById('submit-btn');
-const textarea = document.getElementById('textarea');
-const counter = document.getElementById('counter');
+  const diivFormData = document.querySelector('#form-data');
+  const formEvaluationForm = document.querySelector('#evaluation-form');
+  diivFormData.style.display = 'block';
+  formEvaluationForm.style.display = 'none';
 
-agreementCheck.addEventListener('change', () => {
+  console.log('Ola 21!');
+};
+
+// AgreementCheck change - Só movi a lógica para cá dos dois listeners. ;)
+function agreementCheckFunction() {
   if (agreementCheck.checked) {
     submitBtn.removeAttribute('disabled');
   } else {
     submitBtn.setAttribute('disabled', true);
   }
-});
+}
 
-textarea.addEventListener('keyup', () => {
+// Textarea keyup
+function textareaFunction() {
   counter.innerText = 500 - textarea.value.length;
-});
+}
+
+// Exibe o submit do formulario
+function showSubmitFormularioEvaluation() {
+  
+}
+
+window.onload = () => { 
+  formHeader.addEventListener('submit', validarFormularioLogin);
+  btnSubmmitEvaluationForm.addEventListener('submit', exibirFormularioCadastro);
+  agreementCheck.addEventListener('change', agreementCheckFunction);
+  textarea.addEventListener('keyup', textareaFunction);
+
+  exibirFormularioCadastro;
+};
+
