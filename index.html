@@ -27,57 +27,72 @@
 
     <!-- Main -->
     <main>
-      <section class="family-skills">
-        <label for="" id="label-family">Qual sua família?</label>
-        <div>
-          <input type="radio" name="family" id="Frontend" value="Frontend">
-          <label for="Frontend">Frontend<label>
+      <form action="" id="evaluation-form">
+        <div class="name-lastname">
+          <input type="text" id="input-name" placeholder="Nome">
+          <input type="text" id="input-lastname" placeholder="Sobrenome">
         </div>
-        <div>
-          <input type="radio" name="family" id="Backend" value="Backend">
-          <label for="Backend">Backend<label>
-        </div>
-        <div>
-          <input type="radio" name="family" id="FullStack" value="FullStack">
-          <label for="FullStack">FullStack<label>
-        </div>
-      </section>
-      <section class="subjects-container">
-        <label for="" id="label-content">Qual conteúdo você está com mais
-          vontade de aprender?</label>
-        <div>
-          <input type="checkbox" name="" id="HoFs" class="subject" value="HoFs">
-          <label for="HoFs">HoFs</label>
-          <input type="checkbox" name="" id="Jest" class="subject" value="Jest">
-          <label for="Jest">Jest</label>
-          <input type="checkbox" name="" id="Promises" class="subject"
-            value="Promises">
-          <label for="Promises">Promises</label>
-          <input type="checkbox" name="" id="React" class="subject"
-            value="React">
-          <label for="React">React</label>
-          <input type="checkbox" name="" id="SQL" class="subject" value="SQL">
-          <label for="SQL">SQL</label>
-          <input type="checkbox" name="" id="Python" class="subject"
-            value="Python">
-          <label for="Python">Python</label>
-        </div>
-      </section>
-      <section>
-        <label for="" id="label-rate">Como você avalia a Trybewarts?</label>
-        <span>1</span>
-        <input type="radio" name="rate" id="" value="1">
-        <input type="radio" name="rate" id="" value="2">
-        <input type="radio" name="rate" id="" value="3">
-        <input type="radio" name="rate" id="" value="4">
-        <input type="radio" name="rate" id="" value="5">
-        <input type="radio" name="rate" id="" value="6">
-        <input type="radio" name="rate" id="" value="7">
-        <input type="radio" name="rate" id="" value="8">
-        <input type="radio" name="rate" id="" value="9">
-        <input type="radio" name="rate" id="" value="10">
-        <span>10</span>
-      </section>
+        <div class="email-house">
+          <input type="email" id="input-email" placeholder="Email">
+          <select name="" id="house">
+            <option value="" disabled selected>Escolha sua casa!</option>
+            <option id="gitnoria-house" value="Gitnória">Gitnória</option>
+            <option id="reactpuff-house" value="Reactpuff">Reactpuff</option>
+            <option id="corvinode-house" value="Corvinode">Corvinode</option>
+            <option id="pytherina-house" value="Pytherina">Pytherina</option>
+          </select>
+        <section class="family-skills">
+          <label for="" id="label-family">Qual sua família?</label>
+          <div>
+            <input type="radio" name="family" id="Frontend" value="Frontend">
+            <label for="Frontend">Frontend<label>
+          </div>
+          <div>
+            <input type="radio" name="family" id="Backend" value="Backend">
+            <label for="Backend">Backend<label>
+          </div>
+          <div>
+            <input type="radio" name="family" id="FullStack" value="FullStack">
+            <label for="FullStack">FullStack<label>
+          </div>
+        </section>
+        <section class="subjects-container">
+          <label for="" id="label-content">Qual conteúdo você está com mais
+            vontade de aprender?</label>
+          <div>
+            <input type="checkbox" name="" id="HoFs" class="subject" value="HoFs">
+            <label for="HoFs">HoFs</label>
+            <input type="checkbox" name="" id="Jest" class="subject" value="Jest">
+            <label for="Jest">Jest</label>
+            <input type="checkbox" name="" id="Promises" class="subject"
+              value="Promises">
+            <label for="Promises">Promises</label>
+            <input type="checkbox" name="" id="React" class="subject"
+              value="React">
+            <label for="React">React</label>
+            <input type="checkbox" name="" id="SQL" class="subject" value="SQL">
+            <label for="SQL">SQL</label>
+            <input type="checkbox" name="" id="Python" class="subject"
+              value="Python">
+            <label for="Python">Python</label>
+          </div>
+        </section>
+        <section>
+          <label for="" id="label-rate">Como você avalia a Trybewarts?</label>
+          <span>1</span>
+          <input type="radio" name="rate" id="" value="1">
+          <input type="radio" name="rate" id="" value="2">
+          <input type="radio" name="rate" id="" value="3">
+          <input type="radio" name="rate" id="" value="4">
+          <input type="radio" name="rate" id="" value="5">
+          <input type="radio" name="rate" id="" value="6">
+          <input type="radio" name="rate" id="" value="7">
+          <input type="radio" name="rate" id="" value="8">
+          <input type="radio" name="rate" id="" value="9">
+          <input type="radio" name="rate" id="" value="10">
+          <span>10</span>
+        </section>
+      </form>
       <label class="textarea">Deixe seu comentário:</label>
       <textarea name="" id="textarea" cols="80" rows="10"
         maxlength="500"></textarea>
