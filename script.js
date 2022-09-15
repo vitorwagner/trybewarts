@@ -14,8 +14,7 @@ function validarFormularioLogin(e) {
 
   const email = e.target[0].value;
   const password = e.target[1].value;
-  const isTrybeEmailTest =
-    email === 'tryber@teste.com' && password === '123456';
+  const isTrybeEmailTest = email === 'tryber@teste.com' && password === '123456';
 
   if (isTrybeEmailTest) {
     alert('Olá, Tryber!');
@@ -25,6 +24,15 @@ function validarFormularioLogin(e) {
 }
 
 // Quando o formulário é preenchido.
+
+const answerName = document.getElementById('answer-name');
+const inputName = document.getElementById('input-name');
+const inputLastName = document.getElementById('input-lastname');
+const answerEmail = document.getElementById('answer-email');
+const inputEmail = document.getElementById('input-email');
+const answerHouse = document.getElementById('answer-house');
+const selectHouse = document.getElementById('house');
+
 function exibirFormularioCadastro(e) {
   e.preventDefault();
 
@@ -32,6 +40,9 @@ function exibirFormularioCadastro(e) {
   const formEvaluationForm = document.querySelector('#evaluation-form');
   diivFormData.style.display = 'block';
   formEvaluationForm.style.display = 'none';
+  answerName.innerHTML += ` ${inputName.value} ${inputLastName.value}`;
+  answerEmail.innerHTML += ` ${inputEmail.value}`;
+  answerHouse.innerHTML += ` ${selectHouse.value}`;
 
   console.log('Ola 21!');
 }
@@ -50,14 +61,9 @@ function textareaFunction() {
   counter.innerText = 500 - textarea.value.length;
 }
 
-// Exibe o submit do formulario
-function showSubmitFormularioEvaluation() {}
-
 window.onload = () => {
   formHeader.addEventListener('submit', validarFormularioLogin);
   btnSubmmitEvaluationForm.addEventListener('submit', exibirFormularioCadastro);
   agreementCheck.addEventListener('change', agreementCheckFunction);
   textarea.addEventListener('keyup', textareaFunction);
-
-  exibirFormularioCadastro;
 };
