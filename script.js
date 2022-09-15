@@ -6,7 +6,6 @@ const submitBtn = document.getElementById('submit-btn');
 const textarea = document.getElementById('textarea');
 const counter = document.getElementById('counter');
 
-
 // FUNÇÕES
 
 // Valida o formulário do header de acordo como o requisito 3
@@ -15,7 +14,8 @@ function validarFormularioLogin(e) {
 
   const email = e.target[0].value;
   const password = e.target[1].value;
-  const isTrybeEmailTest = email === 'tryber@teste.com' && password === '123456';
+  const isTrybeEmailTest =
+    email === 'tryber@teste.com' && password === '123456';
 
   if (isTrybeEmailTest) {
     alert('Olá, Tryber!');
@@ -34,7 +34,7 @@ function exibirFormularioCadastro(e) {
   formEvaluationForm.style.display = 'none';
 
   console.log('Ola 21!');
-};
+}
 
 // AgreementCheck change - Só movi a lógica para cá dos dois listeners. ;)
 function agreementCheckFunction() {
@@ -51,11 +51,9 @@ function textareaFunction() {
 }
 
 // Exibe o submit do formulario
-function showSubmitFormularioEvaluation() {
-  
-}
+function showSubmitFormularioEvaluation() {}
 
-window.onload = () => { 
+window.onload = () => {
   formHeader.addEventListener('submit', validarFormularioLogin);
   btnSubmmitEvaluationForm.addEventListener('submit', exibirFormularioCadastro);
   agreementCheck.addEventListener('change', agreementCheckFunction);
@@ -63,4 +61,3 @@ window.onload = () => {
 
   exibirFormularioCadastro;
 };
-
