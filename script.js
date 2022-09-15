@@ -24,6 +24,7 @@ function validarFormularioLogin(e) {
 }
 
 // Quando o formulário é preenchido.
+// Referência para obter o value dos radio buttons: https://stackoverflow.com/questions/22938341/count-the-number-of-checked-checkboxes-in-html
 
 const answerName = document.getElementById('answer-name');
 const inputName = document.getElementById('input-name');
@@ -33,6 +34,8 @@ const inputEmail = document.getElementById('input-email');
 const answerHouse = document.getElementById('answer-house');
 const selectHouse = document.getElementById('house');
 const answerObs = document.getElementById('answer-obs');
+const answerFamily = document.getElementById('answer-family');
+const answerRate = document.getElementById('answer-rate');
 
 function exibirFormularioCadastro(e) {
   e.preventDefault();
@@ -44,6 +47,10 @@ function exibirFormularioCadastro(e) {
   answerName.innerHTML += ` ${inputName.value} ${inputLastName.value}`;
   answerEmail.innerHTML += ` ${inputEmail.value}`;
   answerHouse.innerHTML += ` ${selectHouse.value}`;
+  answerFamily.innerHTML += ` ${
+    document.querySelectorAll('input[name="family"]:checked')[0].value
+  }`;
+  answerRate.innerHTML += ` ${document.querySelectorAll('input[name="rate"]:checked')[0].value}`;
   answerObs.innerHTML += ` ${textarea.value}`;
 
   console.log('Ola 21!');
