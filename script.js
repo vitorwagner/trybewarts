@@ -35,7 +35,16 @@ const answerHouse = document.getElementById('answer-house');
 const selectHouse = document.getElementById('house');
 const answerObs = document.getElementById('answer-obs');
 const answerFamily = document.getElementById('answer-family');
+const answerSubjects = document.getElementById('answer-subjects');
 const answerRate = document.getElementById('answer-rate');
+
+function checkSubjects(item) {
+  if (answerSubjects.innerText === 'Matérias:') {
+    answerSubjects.innerHTML += ` ${item.value}`;
+  } else {
+    answerSubjects.innerHTML += `, ${item.value}`;
+  }
+}
 
 function exibirFormularioCadastro(e) {
   e.preventDefault();
@@ -52,6 +61,7 @@ function exibirFormularioCadastro(e) {
   }`;
   answerRate.innerHTML += ` ${document.querySelectorAll('input[name="rate"]:checked')[0].value}`;
   answerObs.innerHTML += ` ${textarea.value}`;
+  document.querySelectorAll('input[class="subject"]:checked').forEach(checkSubjects);
 
   console.log('Ola 21!');
 }
