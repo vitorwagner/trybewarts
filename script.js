@@ -32,6 +32,7 @@ const answerEmail = document.getElementById('answer-email');
 const inputEmail = document.getElementById('input-email');
 const answerHouse = document.getElementById('answer-house');
 const selectHouse = document.getElementById('house');
+const answerObs = document.getElementById('answer-obs');
 
 function exibirFormularioCadastro(e) {
   e.preventDefault();
@@ -43,6 +44,7 @@ function exibirFormularioCadastro(e) {
   answerName.innerHTML += ` ${inputName.value} ${inputLastName.value}`;
   answerEmail.innerHTML += ` ${inputEmail.value}`;
   answerHouse.innerHTML += ` ${selectHouse.value}`;
+  answerObs.innerHTML += ` ${textarea.value}`;
 
   console.log('Ola 21!');
 }
